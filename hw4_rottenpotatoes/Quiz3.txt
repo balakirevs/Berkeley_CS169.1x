@@ -1,0 +1,44 @@
+1.  Sally wants to create a dating website and decides to write an algorithm that takes a list of male and female users' preferences and returns the best matching of males with females. To test her algorithm, she manually calculates the best match. She then runs the algorithm and checks to see if the observed output matches with her manual calculation. What FIRST principle is clearly not being followed? 
+
+  - (d)  Self-checking
+
+2. High coverage can always be achieved by writing a unit test for every method.
+
+  - (b) False
+
+3. RSpec's stub method can be used to override a method call on
+
+ - (d) any Ruby object
+
+4. For a service like TMDb with an HTTP-based RESTful API, a Ruby wrapper library such as the ruby-tmdb gem is necessary in order to call the service from a Ruby app.
+
+ - (b) False
+
+5. Which of the following guarantees that you have exhaustively unit-tested a piece of code?
+
+  - (d) None of the above
+
+6. Your test randomly changes the comparison operators in your conditionals. This is which kind of testing?
+
+ - (a) Mutation test
+
+7. Which of the following lists the kinds of tests in order of increasing code exercise complexity?
+
+  - (c) Unit tests, functional or module tests, integration tests
+
+8. Which of the following statements are true regarding mocks in RSpec? Select all that apply.
+
+  - (a) Mocks are used to isolate tests from the database 
+  - (c) Mocks can be created with default attribute values 
+
+9. What is the main difference between BDD and TDD?
+
+  - (b) BDD focuses on verification while TDD focuses on validation
+
+10. What is the benefit of using factories over fixtures?
+
+ - (c) Factories keep tests independent, while fixtures may not
+
+11. What would be an example of glass-box testing?
+
+  - (b) Testing a particular code path in the program

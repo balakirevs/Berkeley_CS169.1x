@@ -1,0 +1,95 @@
+1. In the Ruby expression a.foo, which calls method foo on receiver a, which of the following conditions affects whether the call succeeds?
+  - (a) a responds to the foo method.
+  - (b) a's class, or one of its superclasses or included modules, implements method_missing in a way that handles the foo method.
+
+2. What is the result of executing the following code?
+  - (c) 7
+
+3. When the Ruby expression foo + bar is evaluated, which statement is ALWAYS true?
+  - (a) bar is passed as an argument to foo's + method.
+
+4. You are given the following short list of movies exported from an Excel comma-separated values (CSV) file. Each entry is a single string that contains the movie name in double quotes, zero or more spaces, and the movie rating in double quotes. For example, here is a list with three entries:
+
+    movies = [%q{"Aladdin",   "G"},
+              %q{"I, Robot", "PG-13"},
+              %q{"Star Wars","PG"}]
+
+Your job is to create a regular expression to help parse this list:
+
+    movies.each do |movie|
+      movie.match(regexp)
+      title,rating = $1,$2
+    end
+    # => for first entry, title should be Aladdin, rating should be G, WITHOUT the double 
+    # => quotes
+
+You may assume movie titles and ratings never contain double-quote marks. Within a single entry, a variable number of spaces (including 0) may appear between the comma after the title and the opening quote of the rating.
+
+Which of the following regular expressions will accomplish this? Check all that apply.
+
+ - (c) regexp = /"(.*)", "(.*)"/ 
+
+5. Class A is a subclass of Class B. Class B is a subclass of class C. a is an object of class A. b is an object of class B. Which ONE of the following Ruby expressions is NOT true?
+
+  -(b) a.superclass == b.class
+
+6. A valid DNA sequence consists of any number of A, G, C, and T bases. A valid RNA sequence consists of any number of A, G, C, and U bases. (Valid DNA sequences never contain U, and valid RNA sequences never contain T.) Which regular expression below matches an entire sequence that is either valid DNA or valid RNA?
+
+- (c) /^[(ACGU)|(ACGT)]+$/
+
+7. Which of the following statements about classes in Ruby are true?
+
+  -(a) Array is an instance of Class
+
+8. Given the following code:
+
+      class Book
+        attr_accessor :author
+        attr_reader :title
+        attr_writer :comments
+        def initialize(author, title)
+          @author = author
+          @title = title
+          @comments = []
+        end
+      end
+
+      book = Book.new("Chuck Palahniuk", "Fight Club")
+
+Which of the following snippets of code are valid?
+
+- (a) "#{book.title} was written by #{book.author}."
+
+9. True or False: The Agile lifecycle is the best model for all software development?
+
+ - (b) False
+
+10. Which of these statements are true regarding Modules in Ruby?
+
+    Modules hold a collection of methods and constants
+    Modules can inherit from classes
+    Modules allow you to share functionality across classes
+
+  - (c) (1) and (2)
+
+11. Given a string s = "Hello: I`m a l33t programmer!!" what single line of Ruby will produce the array ["Hello", "m", "a", "l", "t", "programmer"]
+
+ - (a) s.split(/[^a-zA-Z]/).reject{|e| e == "I" || e.empty?}
+
+12. Consider the following code:
+
+    def mystery_sequence(start1, start2, limit=4)
+      yield start1
+      yield start2
+      nextval = start1 + start2
+      1.upto(limit) do
+        yield nextval
+        nextval, start2 = nextval + start2, nextval
+      end
+    end
+
+Assuming s is initially an empty array [], which call will cause s to have the value: [2,3,5,8,13,21] ?
+
+ - (a) mystery_sequence(2,3) do |elt| ; s<<elt; end
+
+
