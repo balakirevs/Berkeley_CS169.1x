@@ -1,0 +1,103 @@
+1. Which of the following are goals of Behavior-Driven Design (BDD)? Select all that apply.
+
+ - (a) To verify that the application meets the specification
+ - (b) To validate that the design does what the customer wants
+
+2. A ----- refers to a single ----- with one or more -----, each of which is composed of a sequence of -----.
+
+ - (c) user story, feature, scenarios, steps
+
+3. The purpose of the Lo-Fi UI and storyboards is to debug the UI before you program it.
+
+ - (a) True.
+
+4. Which of the following sets of code will add a new movie entry to the database with all attributes properly set? Select all that apply.
+
+ - (a) batman_begins = Movie.create(:title => 'Batman Begins', :release_date => '6/15/2005',
+:rating => 'PG-13')
+
+ - (b) dark_knight = Movie.new
+dark_knight.title = 'The Dark Knight'
+dark_knight.release_date = '7/18/2008'
+dark_knight.rating = 'PG-13'
+dark_knight.save!
+
+5. A user submits a new movie form. How would the associated controller access the title of the movie?
+
+ -(c) params['title']
+
+6. Which of the following is an invalid statement regarding render and redirect_to?
+
+ - (c) render will not cause the current action to stop executing
+
+7. Which of the following can be used to store state ACROSS requests from the same user? Select all that apply. 
+
+ - (c) Instance variables set by a controller method
+
+8. What does line 4 do in the following code? Select all that apply.
+
+1 class PostsController < ActionController::Base
+2 def add_post
+3 # ...code to create new blog post...
+4 flash[:notice] = "Post added successfully"
+5 redirect_to posts_url
+6 end
+7 end
+
+  - (b) Makes the message available to whatever view is rendered for this action
+  - (c) Persists the message until the next request
+
+9. If a user enters values in a view, and then those values get sent to the controller as params['movie']['title'], those values are accessible to the controller action during
+
+ - (c) this request and all subsequent requests
+
+10. If a controller action sets an instance variable, the instance variable's value is accessible to
+
+  - (a) views rendered for this request only
+
+11. Sally wants her website to have a special layout on the first Tuesday of every month. She has the following controller and test code:
+
+  # HomeController
+  def index
+    if Time.now.tuesday?
+      render 'special_index'
+    else
+      render 'index'
+    end
+  end
+
+  # HomeControllerSpec
+  it "should render special template on Tuesdays" do
+    get 'index'
+    if Time.now.tuesday?
+      response.should render_template('special_index')
+    else
+      response.should render_template('index')
+    end
+  end
+
+What FIRST principle is not being followed?
+
+ - (c) Repeatable
+
+12. Suppose RottenPotatoes.com wants to launch m.rottenpotatoes.com, an alternate version of the site for mobile clients. If the site was built using an MVC architecture, the majority of the work will go into writing new
+
+ - (d) schema
+
+13. Why do software projects fail? Select all that apply. 
+
+ - (a) They don't do what customers want
+ - (d) They are hard to maintain and evolve
+
+14. Which of the following are true about user stories? Select all that apply. 
+
+ - (a) They should describe how the application is expected to be used
+ - (b) They should have business value
+
+15. Which of the following is true about implicit requirements and explicit requirements?
+
+  - (c) Implicit requirements are the logical consequence of explicit requirements, and typically correspond to integration tests
+
+16. When should you write specific (imperative) user stories instead of declarative user stories?
+
+  - (a) When you want to express the details of the user interface for business value or customer need
